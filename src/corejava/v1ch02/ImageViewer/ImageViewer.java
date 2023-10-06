@@ -28,6 +28,10 @@ class ImageViewerFrame extends JFrame {
     private static final int DEFAULT_HEIGHT = 400;
 
     public ImageViewerFrame() {
+        setTitle("ImageViewer");
+
+        getContentPane().setBackground(Color.DARK_GRAY);
+
         setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
 
         // use a label to display the images
