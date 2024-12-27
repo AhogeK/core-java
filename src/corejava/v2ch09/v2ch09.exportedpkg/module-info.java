@@ -1,5 +1,5 @@
-@SuppressWarnings("module") 
+@SuppressWarnings("module")
 module v2ch09.exportedpkg
 {
-   requires com.horstmann.greet;
+    requires com.horstmann.greet;
 }

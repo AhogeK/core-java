@@ -7,7 +7,7 @@ import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 
 public class ObjectAnalyzer {
-    private ArrayList<Object> visited = new ArrayList<>();
+    private final ArrayList<Object> visited = new ArrayList<>();
 
     /**
      * Converts an object to a string representation that lists all fields.

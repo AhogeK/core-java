@@ -29,9 +29,9 @@ public class StaticTest {
 class Employee {
     private static int nextId = 1;
 
-    private String name;
-    private double salary;
-    private int id;
+    private final String name;
+    private final double salary;
+    private final int id;
 
     public Employee(String n, double s) {
         name = n;

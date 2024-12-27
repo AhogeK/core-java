@@ -21,7 +21,7 @@ enum JSONNull implements JSONPrimitive {
 }
 
 sealed interface JSONValue permits JSONArray, JSONObject, JSONPrimitive {
-    public default String type() {
+    default String type() {
         if (this instanceof JSONArray) return "array";
         else if (this instanceof JSONObject) return "object";
         else if (this instanceof JSONNumber) return "number";
@@ -54,13 +54,13 @@ final class JSONObject extends HashMap<String, JSONValue> implements JSONValue {
     }
 }
 
-final record JSONNumber(double value) implements JSONPrimitive {
+record JSONNumber(double value) implements JSONPrimitive {
     public String toString() {
         return "" + value;
     }
 }
 
-final record JSONString(String value) implements JSONPrimitive {
+record JSONString(String value) implements JSONPrimitive {
     public String toString() {
         return "\"" + value.translateEscapes() + "\"";
     }

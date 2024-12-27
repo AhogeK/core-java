@@ -62,7 +62,7 @@ public class ParamTest {
 
 class Employee // simplified Employee class
 {
-    private String name;
+    private final String name;
     private double salary;
 
     public Employee(String n, double s) {

@@ -26,7 +26,7 @@ public class ConstructorTest {
 
 class Employee {
     private static int nextId;
-    private static Random generator = new Random();
+    private static final Random generator = new Random();
 
     // static initialization block
     static {
@@ -34,7 +34,7 @@ class Employee {
         nextId = generator.nextInt(10000);
     }
 
-    private int id;
+    private final int id;
     private String name = ""; // instance field initialization
     private double salary;
 
